@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Data:
+  = @receipt.data
+%p
+  %b Store:
+  = @receipt.store_id
+
+= link_to 'Edit', edit_receipt_path(@receipt)
+\|
+= link_to 'Back', receipts_path

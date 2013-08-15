@@ -11,6 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20130815154011) do
+
+  create_table "receipts", force: true do |t|
+    t.string   "data"
+    t.integer  "store_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "receipts", ["store_id"], name: "index_receipts_on_store_id"
+
+  create_table "stores", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

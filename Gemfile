@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 ruby '1.9.3'
 gem 'rails', '4.0.0'
-gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -14,7 +13,13 @@ gem 'simple_form', '>= 3.0.0.rc'
 gem 'therubyracer', :platform=>:ruby
 gem 'thin'
 gem 'twitter-bootstrap-rails'
+
+group :production do
+  gem 'pg'
+end
+
 group :development do
+  gem 'sqlite3'
   gem 'guard-bundler'
   gem 'guard-rails'
   gem 'html2haml'
