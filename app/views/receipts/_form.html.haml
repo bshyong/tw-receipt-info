@@ -3,7 +3,7 @@
 
   .form-inputs
     = f.input :data
-    = f.collection_select :store_id, Store.all, :id, :name
+    = f.association :store
 
   .form-actions
     = f.button :submit
